@@ -2,7 +2,7 @@ import numpy as np
 import os
 #from sklearn.ensemble import IsolationForest
 
-learnRate=0.1
+learnRate=0.1  #the rate of learning
 def _h(i):
     return np.log(i) + 0.5772156649
 
@@ -200,6 +200,14 @@ class iForest():
             self.trees[i].update(X,minIndex,direction)
         return
 
+    def updateweightlog(X, minIndex,direction):
+        return
+
+    def updateweightlogister(X, minIndex,direction):
+        return
+
+
+
 def getfeedback(X):
     return -1
 
@@ -211,7 +219,6 @@ if __name__ == '__main__':
     node=iTree(X)
     IF = iForest()
     IF.fit(X)
-
     print(IF.anomaly_score_)
     instanceiffeedback=[]   #这个数据是否已经被标记
     direction=1
